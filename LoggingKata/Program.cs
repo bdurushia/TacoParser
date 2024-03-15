@@ -66,12 +66,12 @@ namespace LoggingKata
             for (int i = 0; i < locations.Length; i++)
             {
                 var locA = locations[i];
-                var corA = new GeoCoordinate(locations[i].Location.Latitude, locations[i].Location.Longitude);
+                var corA = new GeoCoordinate(locA.Location.Latitude, locA.Location.Longitude);
 
                 for (int l = 0; l < locations.Length; l++)
                 {
                     var locB = locations[l];
-                    var corB = new GeoCoordinate(locations[l].Location.Latitude, locations[l].Location.Longitude);
+                    var corB = new GeoCoordinate(locB.Location.Latitude, locB.Location.Longitude);
 
                     if (corA.GetDistanceTo(corB) > distance)
                     {
